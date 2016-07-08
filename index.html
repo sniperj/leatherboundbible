@@ -1,0 +1,124 @@
+ <!doctype html>
+ <!--[if lte IE 7]> <html class="ie7" lang="en"> <![endif]-->
+ <!--[if IE 8]>     <html class="ie8" lang="en"> <![endif]-->
+ <!--[if IE 9]>     <html class="ie9" lang="en"> <![endif]-->
+ <!--[if !IE]><!--> <html lang="en">             <!--<![endif]-->
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width" />
+     <title>{SITE_NAME}</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <link rel="stylesheet" href="assets/style.min.css">
+ </head>
+ <body>
+    <div class="lpBg">
+<div class='logoWrapper'><div id='logo'>{SITE_NAME}</div></div>
+
+        <div class='container'>
+            <div class="row">
+              <div class='col-md-12'>
+                  <div class="lpHeader">
+                    <div class="lpHeader1">Get an exclusive</div>
+                    <div class="lpHeader2">Leather Bound <span>Bible</span></div>
+                    <div class="lpHeader3"><a class="details-apply">details apply</a></div>
+                    <div class="lpHeader4">
+                          <div class="lpHeader4a">3 Versions Available
+                              <div class="lpHeader4a1">niv, nkjv, nlv</div>
+                          </div>
+                          <div class="lpHeader4b"><img src='assets/product.min.png'></div>
+                          <div class="lpHeader4c">niv, nkjv, nlv</div>
+                    </div>
+                  </div>
+              </div>
+           </div>
+        </div>
+    </div>
+     <div class="container">
+            <div class="row">
+                         <div class="col-md-1">  </div>
+                          <div class="col-md-10">
+                              <div class="box">
+                                   <div id="form">
+                                        <div class="field" id="emailWrap">
+                                         <div class="email-wrapper">
+                                          <label for="email" class="email-label">Enter Your Email:</label>
+                                          <input type="email" name="email" id="email" class="email" value="{email}">
+                                        </div>
+                                       </div>
+
+                                        <div class="gift-wrapper">
+                                          <label for="giftField" class="gift-label">Select Your Gift:</label>
+                                          <select name="gift" id="giftField">
+                                           <option value="32393">NKJV Leather Bound Bible</option>
+                                          <option value="32392">NIV Leather Bound Bible</option> 
+                                          <option value="32391">NLV Leather Bound Bible</option> 
+                                           
+                                          </select>
+                                        </div>
+                                         <button type="submit" name="submit" id="submit" class="submit">Continue</button>
+                                   </div>
+                               <!-- <div class='miniBible'><img src='http://i.pcp003.com/t/22487/miniBible.min.jpg'></div>-->
+                              </div>
+                    </div>
+                    <div class="col-md-1">  </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+<footer>
+  
+<!-- OUTPUT -->
+
+<div id="clickgen-footer">
+  <div id="giftProgram">
+    <strong>{SITE_NAME} Gift Program is not endorsed, sponsored by or affiliated with any merchants listed above. Such terms are registered trademarks of their respective owners.</strong>
+  </div>
+  <div id="disclosure">This promotion is conducted exclusively by {SITE_NAME}.  To receive the Gift you must:  1) be a US resident, 18 or older and complete the registration process with your valid contact information; 2) complete {OFFER_REQUIREMENTS_LINKS} Sponsor Offers within 60 days of your Program Sign-Up Date (offer availability will vary); 3) not cancel your participation in more than 2 Sponsor Offers within 30 days of the Sponsor Offer Initial Transaction Date (the Cancellation Limitation); 4) complete all <a href="" target="_blank" >Program Requirements</a>, including the Gift Redemption process, within 180 days of your Program Sign-Up Date. You can receive the Gift at no cost by completing free trial Sponsor Offers and/or by following the Refer-A-Friend Offer requirements; otherwise some Sponsor Offers may require a purchase to qualify.  Gifts are shipped to the postal address provided during registration.  Limit one Gift per household per year. Void where prohibited.</div>
+  <nav align="center">
+    <a href="" target="_blank" >Check Gift Status</a> 
+    - <a href="" target="_blank" >Help</a> 
+    - <a href="" target="_blank" >Privacy Policy</a> 
+    - <a href="" target="_blank" >Terms & Conditions</a> 
+    - <a href="" target="_blank" >Unsubscribe</a> 
+    - <a href="" target="_blank" >Contact Us</a>
+  </nav>
+  <div id="copyright" align="center">Copyright <sup>&copy;</sup> <span id="year">{year}</span> {SITE_NAME}. All rights reserved.</div>
+</div>
+</footer>
+              </div>
+          </div>
+     </div>      
+
+ 
+ <!-- END Pop-up Disclaimer -->
+<div id="popup-box">
+  <div id="popup-box_wrapper">
+    <header>
+      <button type="button">Close</button>
+    </header>
+    <section id="popup-box_content"></section>
+  </div>
+</div>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+  var popup = document.getElementById('popup-box'),
+    da = document.getElementsByClassName('details-apply');
+  function close() {
+    popup.style.display = 'none';
+  }
+  document.getElementById('popup-box_wrapper').onmouseleave = close;
+  document.querySelector('#popup-box button').onclick = close;
+  Array.prototype.slice.call(da).forEach(function(details) {
+    details.onclick = function(e) {
+      e.preventDefault();
+      popup.style.display = 'block';
+    };
+  });
+  document.getElementById('popup-box_content').innerHTML = document.getElementById('disclosure').innerHTML;
+
+     $(function() {
+       $('.gift-label').html("Select Your Version");
+     });
+ </script>
+ </body>
+ </html>
